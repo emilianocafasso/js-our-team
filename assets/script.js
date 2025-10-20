@@ -55,18 +55,38 @@ const NewCardImg = document.getElementById('newcard-img')
 form.addEventListener('submit', (event) => {
 
   event.preventDefault() //prevengo refresh
+  const col = document.createElement('div')
 
-  let name = NewCardEmail.value
+  let name = NewCardName.value
   let role = NewCardRole.value
   let email = NewCardEmail.value
-  let img = NewCardImg.value
+  let image = NewCardImg.value
 
+  let newMember = {
+    name: name,
+    role: role,
+    email: email,
+    img: image
+  }
+  teamMembers.push(newMember)
+  console.log(teamMembers)
+  console.log(name);
   
-
-
+  let newcard = `
+  <div class="row g-0 h-100 bg-black">
+    <div class="col-4">
+      <img src="assets/${image}" alt"" class="w-100">
+    </div>
+    <div class="col-7 text-white px-3 mt-2">
+      <h5 class="fw-bolder">${name}</h5>
+      <p>${role}</p>
+      <p class="text-info mb-0">${email}</p>
+    </div>
+  </div>
+  `
+  col.appendChild(newcard)
+  container.appendChild(col)
 })
-
-
 
 //seleziono il contenitore
 const container = document.getElementById('team-container')
