@@ -15,14 +15,29 @@
 </head>
 
 <body>
-    <div class="container py-4">
+    <header class="container py-3">
         <h1 class="text-center mb-4 fw-bolder" style="color: rgb(230, 73, 115);">Meet our team</h1>
         <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nesciunt suscipit
             quod! Ipsa quam esse porro tenetur est nesciunt rem!</p>
-            <div class="row" id="team-container">
-                
-            </div>
+    </header>
+
+
+    <div class="container">
+        <form id="form" class=" mb-3">
+            <label for="newcard-name" class="form-label">Nome Cognome</label>
+            <input type="text" id="newcard-name" class="form-control">
+            <label for="newcard-role" class="form-label">Ruolo</label>
+            <input type="text" id="newcard-role" class="form-control">
+            <label for="newcard-email" class="form-label">Email</label>
+            <input type="text" id="newcard-email" class="form-control">
+            <label for="new-card-img" class="form-label">Immagine</label>
+            <input type="text" id="newcard-img" class="form-control">
+            <button type="submit" class="btn btn-primary my-3">Conferma</button>
+        </form>
+        
+        <div class="row" id="team-container"></div>
     </div>
+
     <script src="./assets/script.js"></script>
 </body>
 

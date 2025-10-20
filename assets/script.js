@@ -12,39 +12,61 @@ const teamMembers = [
     name: "Marco Bianchi",
     role: "Designer",
     email: "marcobianchi@team.com",
-    img: "assets/img/male1.png"
+    img: "/img/male1.png"
   },
   {
     name: "Laura Rossi",
     role: "Front-end Developer",
     email: "laurarossi@team.com",
-    img: "assets/img/female1.png"
+    img: "/img/female1.png"
   },
   {
     name: "Giorgio Verdi",
     role: "Back-end Developer",
     email: "giorgioverdi@team.com",
-    img: "assets/img/male2.png"
+    img: "/img/male2.png"
   },
   {
     name: "Marta Ipsum",
     role: "SEO Specialist",
     email: "martarossi@team.com",
-    img: "assets/img/female2.png"
+    img: "/img/female2.png"
   },
   {
-    name: "Roberto Lorem",
+    name: "Roberto Ciao",
     role: "SEO Specialist",
     email: "robertolorem@team.com",
-    img: "assets/img/male3.png"
+    img: "/img/male3.png"
   },
   {
     name: "Daniela Amet",
     role: "Analyst",
     email: "danielaamet@team.com",
-    img: "assets/img/female3.png"
+    img: "/img/female3.png"
   }
 ];
+
+const formEL = document.getElementById('form')
+const NewCardName = document.getElementById('newcard-name')
+const NewCardRole = document.getElementById('newcard-role')
+const NewCardEmail = document.getElementById('newcard-email')
+const NewCardImg = document.getElementById('newcard-img')
+
+form.addEventListener('submit', (event) => {
+
+  event.preventDefault() //prevengo refresh
+
+  let name = NewCardEmail.value
+  let role = NewCardRole.value
+  let email = NewCardEmail.value
+  let img = NewCardImg.value
+
+  
+
+
+})
+
+
 
 //seleziono il contenitore
 const container = document.getElementById('team-container')
@@ -65,7 +87,7 @@ for (let i = 0; i < teamMembers.length; i++) {
   card.innerHTML = `
   <div class="row g-0 h-100 bg-black">
     <div class="col-4">
-      <img src="${thisMember.img}" alt"" class="w-100">
+      <img src="assets/${thisMember.img}" alt"" class="w-100">
     </div>
     <div class="col-7 text-white px-3 mt-2">
       <h5 class="fw-bolder">${thisMember.name}</h5>
