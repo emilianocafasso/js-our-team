@@ -50,15 +50,32 @@ const teamMembers = [
 const container = document.getElementById('team-container')
 
 //ciclo per creare una card per ogni membro del team
-for(let i=0; i<teamMembers.length; i++) {
+for (let i = 0; i < teamMembers.length; i++) {
+
   const thisMember = teamMembers[i]
 
   //creo la colonna bootstrap
   const col = document.createElement('div')
-  col.className = 'col-md-4 mb-4' //3 colonne a partire da schermi medium
-  
+  col.className = 'col-md-6 col-lg-4 mb-4' //3 colonne a partire da schermi medium
+
   //creo la card bootstrap
   const card = document.createElement('div')
-  
 
+  //aggiungo il contenuto alla card
+  card.innerHTML = `
+  <div class="row g-0 h-100 bg-black">
+    <div class="col-4">
+      <img src="${thisMember.img}" alt"" class="w-100">
+    </div>
+    <div class="col-7 text-white px-3 mt-2">
+      <h5 class="fw-bolder">${thisMember.name}</h5>
+      <p>${thisMember.role}</p>
+      <p class="text-info mb-0">${thisMember.email}</p>
+    </div>
+  </div>
+  `
+
+  //aggiungo in pagina
+  col.appendChild(card)
+  container.appendChild(col)
 }
