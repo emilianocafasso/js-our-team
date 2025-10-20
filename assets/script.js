@@ -45,3 +45,11 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+//seleziono il contenitore
+const container = document.getElementById('card-container')
+
+//ciclo per creare una card per ogni membro del team
+for(let i=0; i<teamMembers.length; i++) {
+  const thisMember = teamMembers[i]
+}
